@@ -58,3 +58,5 @@ for element in matches_list:
     print(json.dumps(element, indent=3, default=str))
 
 print('finished')
+
+print(3 or 7 > 5)
