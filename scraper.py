@@ -1,5 +1,4 @@
 import requests
-import json
 from bs4 import BeautifulSoup
 from match_formatter import match_formatter
 
@@ -52,11 +51,3 @@ for element in matches:
 
     matches_list.append(formatted_match)
 
-
-# printing matches in json format:
-for element in matches_list:
-    print(json.dumps(element, indent=3, default=str))
-
-print('finished')
-
-print(3 or 7 > 5)
