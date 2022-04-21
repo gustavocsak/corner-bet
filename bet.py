@@ -1,4 +1,5 @@
 from scraper import matches_list
+from db import collection
 import json
 
 START_MINUTES_FIRSTHALF = 38
@@ -74,9 +75,6 @@ for match in matches_list:
 
 
 for element in games_to_bet:
-    print(json.dumps(element, indent=3, default=str))
+    collection.insert_one({element})
 
-for element in matches_list:
-    print(json.dumps(element, indent=3, default=str))
-
-print('finished')
+print('done')
