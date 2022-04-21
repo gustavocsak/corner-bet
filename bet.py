@@ -76,4 +76,7 @@ for match in matches_list:
 for element in games_to_bet:
     print(json.dumps(element, indent=3, default=str))
 
+for element in matches_list:
+    print(json.dumps(element, indent=3, default=str))
+
 print('finished')

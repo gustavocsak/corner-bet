@@ -14,8 +14,6 @@ matches = match_table.select('tr')
 
 matches_list = []
 
-
-
 for element in matches:
 
     current_status = element.find('td', class_='match_status').find('span').text
@@ -50,4 +48,6 @@ for element in matches:
     formatted_match = match_formatter(match)
 
     matches_list.append(formatted_match)
+
+
 
