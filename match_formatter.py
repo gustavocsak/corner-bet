@@ -6,8 +6,6 @@ def match_formatter(match):
         
         if match[key] in possible_errors:
             match[key] = 0
-    
-    
 
     if match['current_minutes'] == "Half":
         match['current_minutes'] = 45
