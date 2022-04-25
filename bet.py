@@ -1,4 +1,4 @@
-from scraper import matches_list
+from live_scraper import matches_list
 from db import predictions, results
 import json
 

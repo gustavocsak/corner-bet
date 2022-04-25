@@ -4,7 +4,7 @@ from match_formatter import match_formatter
 
 
 live_url = 'https://www.totalcorner.com/match/today/'
-ended_url = 'https://www.totalcorner.com/match/today/ended'
+
 
 response = requests.get(live_url)
 soup = BeautifulSoup(response.content, 'html.parser')
@@ -21,13 +21,13 @@ for element in matches:
     if(current_status == ''):
         break
 
+    match_id = element['data-match_id']
     home_team = element.find('td', class_='match_home').find('a').text
     away_team = element.find('td', class_='match_away').find('a').text
     score = element.find('td', class_='match_goal').text
     corners = element.find('td', class_='match_corner').find('div').find('span', class_='span_match_corner').text.replace('-', '').strip()
     attacks = element.find('td', class_='match_attach').find('div', class_='match_dangerous_attacks_div').text.replace('-', '').strip()
     shots = element.find('td', class_='match_shoot').find('div', class_='match_shoot_div').text.replace('-', '').strip()
-
 
     match = {
         
