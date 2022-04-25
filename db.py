@@ -11,5 +11,6 @@ DB_PASS = os.getenv('DB_PASS')
 cluster = MongoClient(f'mongodb+srv://{DB_USER}:{DB_PASS}@cluster0.5gryi.mongodb.net/Matches?retryWrites=true&w=majority')
 
 db = cluster["Matches"]
-collection = db["test"]
+predictions = db["predictions"]
+results = db["results"]
 
