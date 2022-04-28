@@ -57,6 +57,9 @@ def match_formatter(matches):
 
                 match[key] = int(match[key])
 
+
+        match['corner_sum'] = int(match['home_corner']) + int(match['away_corner'])
+
         formatted_list.append(match)
         
     
