@@ -14,8 +14,6 @@ matches = match_table.select('tr')
 
 matches_list = match_formatter(matches)
 
-for item in matches_list:
-    print(item)
 
 
 
