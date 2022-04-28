@@ -20,8 +20,7 @@ for element in current_predicitons:
     finished_match = match_table.find('tr', {"data-match_id": element['match_id']})
 
 
-# Get predictions
-# Check ended table rows based on team names
+# Check ended table rows based on match id
 # When found: check if prediction was made in 1st or 2nd half
 # Check corners
 # Add to results
