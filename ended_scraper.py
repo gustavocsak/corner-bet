@@ -11,9 +11,9 @@ match_table = soup.find('tbody', class_='tbody_match')
 
 matches_list = []
 
-current_predicitons = predictions.find({})
+current_predictions = predictions.find({})
 
-for element in current_predicitons:
+for element in current_predictions:
 
     # Find prediction in finished matches table by match id
     finished_match = match_table.find('tr', {"data-match_id": element['match_id']})

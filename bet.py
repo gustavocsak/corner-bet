@@ -1,6 +1,5 @@
 from live_scraper import matches_list
-from db import predictions, results
-import json
+from db import predictions
 
 START_MINUTES_FIRSTHALF = 38
 END_MINUTES_FIRSTHALF = 44
@@ -74,4 +73,4 @@ for match in matches_list:
 for element in games_to_bet:
     predictions.insert_one(element)
 
-print('done')
+print('{} predictions added'.format(len(games_to_bet)))

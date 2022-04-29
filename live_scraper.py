@@ -13,9 +13,3 @@ match_table = soup.find('tbody', class_='tbody_match')
 matches = match_table.select('tr')
 
 matches_list = match_formatter(matches)
-
-
-
-
-
-
