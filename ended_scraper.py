@@ -20,6 +20,7 @@ for element in current_predicitons:
 
     corner_prediction = int(element['home_corner']) + int(element['away_corner'])
 
+    # Check which half bet was placed and get right corner stats
     if int(element['current_minutes']) < 45:
         corner_result = finished_match.find('td', class_='match_corner').find('div').find('span', class_='span_half_corner').text
         corner_result = corner_result.replace('(', '').replace(')', '').replace('-', '')
@@ -40,9 +41,3 @@ for element in current_predicitons:
     predictions.delete_one({'_id': element['_id']})
 
     results.insert_one(element)
-
-
-# Check ended table rows based on match id
-# When found: check if prediction was made in 1st or 2nd half
-# Check corners
-# Add to results
